@@ -5,10 +5,12 @@ H, M = input().split()
 H = int(H)
 M = int(M)
 
-if M >= 45:
-    print(H, M-45)
-else:
-    if H == 0:
-        print(23, M+15)
-    else:
-        print(H-1, M+15)
+alarm = H * 60 + M - 45
+
+if alarm < 0:
+    alarm = 24 * 60 + M - 45
+
+alarm_H = alarm // 60
+alarm_M = alarm % 60
+
+print(alarm_H, alarm_M)
