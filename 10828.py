@@ -31,7 +31,7 @@ class Stack:
 
 
 case_num = int(input())
-S = Stack() # 알파벳 Q를 Queue 클래스로
+S = Stack()
 
 for i in range(case_num):
     cmd = list(input().split(' '))
